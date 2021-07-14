@@ -1,10 +1,15 @@
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
+import os
 
 data = pd.read_csv('demo.csv')
-data.drop_duplicates(subset=['Email'], keep='last', inplace=True)
-names = data['Name'].to_list()
-emails = data['Email'].to_list()
+data.drop_duplicates(subset=['Emails'], keep='last', inplace=True)
+names = data['Names'].to_list()
+emails = data['Emails'].to_list()
+if os.path.exists('certificates'):
+    pass
+else:
+    os.mkdir('certificates')
 with open("logs.txt", 'a') as f:
     for (name, email) in zip(names, emails):
         try:

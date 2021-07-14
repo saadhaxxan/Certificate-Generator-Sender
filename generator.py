@@ -1,7 +1,8 @@
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 
-data = pd.read_csv('techtehvaarorg.csv')
+data = pd.read_csv('demo.csv')
+data.drop_duplicates(subset=['Email'], keep='last', inplace=True)
 names = data['Name'].to_list()
 emails = data['Email'].to_list()
 with open("logs.txt", 'a') as f:

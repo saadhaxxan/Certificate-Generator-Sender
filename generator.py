@@ -3,6 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 
 data = pd.read_csv('demo.csv')
+data.dropna(inplace=True,axis=1)
 data.drop_duplicates(subset=['Emails'], keep='last', inplace=True)
 names = data['Names'].to_list()
 emails = data['Emails'].to_list()
@@ -42,7 +43,7 @@ with open("logs.txt", 'a') as f:
             f.write(str(email) + " Success")
             f.write("\n")
         except:
-            f.write("\n")
             print(str(email) + " Failed")
+            f.write("\n")
             f.write(str(email)+" Failed")
     f.close()

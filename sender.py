@@ -30,10 +30,9 @@ with open("emaillogs.txt", 'a') as f:
                 print(str(mail_to) + " Sending Success")
                 f.write(str(mail_to) + " Sending Success")
                 f.write("\n")
-                i += 1  # open in readonly mode
+                i += 1
         except:
-            f.write("\n")
             print(str(mail_to) + " Sending Failed")
+            f.write("\n")
             f.write(str(mail_to)+" Sending Failed")
     f.close()
-    # do your stuff

@@ -6,6 +6,8 @@ git clone https://github.com/saadhaxxan/Certificate-generator-sender.git
 cd Certificate-generator-sender
 ```
 
+## How to use
+
 ## Author
 You can get in touch with me on my LinkedIn Profile:
 

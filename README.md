@@ -1,7 +1,9 @@
-<div align="center">
-<h1>Certificate Generator & Sender</h1>
-</div>
-
+<h1 align="center">Certificate Generator & Sender</h1>
+<a href="#">
+  <div align="center">
+    <img src="screenshot.png" width='700'/>
+  </div>
+</a>
 ## How To Run
 ```
 git clone https://github.com/saadhaxxan/Certificate-generator-sender.git

@@ -1,4 +1,6 @@
-<h1 align="center">Certificate Generator & Sender</h1>
+<div align="center">
+<h1>Certificate Generator & Sender</h1>
+</div>
 
 ## How To Run
 ```

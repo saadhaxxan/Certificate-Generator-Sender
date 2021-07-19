@@ -1,3 +1,4 @@
+# importing libraries
 import os
 import re
 import time
@@ -5,6 +6,7 @@ import smtplib
 import imghdr
 from email.message import EmailMessage
 from email.utils import formataddr
+
 EMAIL_ADDRESS = 'Your_email'
 EMAIL_PASSWORD = 'Your_password'
 
@@ -17,7 +19,7 @@ with open("emaillogs.txt", 'a') as f:
                 msg = EmailMessage()
                 msg['Subject'] = 'Email Subject Here'
                 msg['From'] = formataddr(
-                    ('Saad Hassan', 'saad.haxxan786@gmail.com'))
+                    ('Sender Name', 'sender email'))
                 mail_to = filename.rsplit(".", 1)[0]
                 msg['To'] = mail_to
                 msg.set_content('''Email Content Goes Here''')

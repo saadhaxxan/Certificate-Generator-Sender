@@ -7,8 +7,10 @@ cd Certificate-generator-sender
 ```
 
 ## How to use
-- Add `base_file.png` as your certificate
+- Add `base_file.png` as your certificate file
 - Replace `demo.csv` with you own csv file that must have 2 columns of `Names` and `Emails`
+- Open up `generator.py` and add your own custom text for the certificate
+- Run `python generator.py`
 
 ## Author
 You can get in touch with me on my LinkedIn Profile:

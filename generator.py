@@ -1,16 +1,22 @@
+# importing libraries
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 import os
-
+# reading csv
 data = pd.read_csv('demo.csv')
+# remove null values
 data.dropna(inplace=True,axis=1)
+# dropping dupicate rows
 data.drop_duplicates(subset=['Emails'], keep='last', inplace=True)
+# convert to list
 names = data['Names'].to_list()
 emails = data['Emails'].to_list()
+# checking if the directory exists
 if os.path.exists('certificates'):
-    pass
+    print("Folder already exists")
 else:
     os.mkdir('certificates')
+# opening log file and writing ceritifcates
 with open("logs.txt", 'a') as f:
     for (name, email) in zip(names, emails):
         try:

@@ -10,7 +10,10 @@ cd Certificate-generator-sender
 - Add `base_file.png` as your certificate file
 - Replace `demo.csv` with you own csv file that must have 2 columns of `Names` and `Emails`
 - Open up `generator.py` and add your own custom text for the certificate
-- Run `python generator.py`
+- Run `python generator.py` in cmd
+- Open up `sender.py` and add your email credentials
+- Verify the certificates folder and then replace the subject and body of email with your own data
+- Run `python sender.py` in cmd
 
 ## Author
 You can get in touch with me on my LinkedIn Profile:
@@ -24,4 +27,4 @@ You can also follow my GitHub Profile to stay updated about my latest projects: 
 If you liked the repo then kindly support it by giving it a star ⭐!
 
 ## LICENSE
-- MIT (2021)
+- Apache-2.0 (2021)

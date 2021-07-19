@@ -7,6 +7,8 @@ cd Certificate-generator-sender
 ```
 
 ## How to use
+- Add `base_file.png` as your certificate
+- Replace `demo.csv` with you own csv file that must have 2 columns of `Names` and `Emails`
 
 ## Author
 You can get in touch with me on my LinkedIn Profile:

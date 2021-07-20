@@ -11,10 +11,10 @@
 - Add `base_file.png` as your certificate file
 - Replace `demo.csv` with you own csv file that must have 2 columns of `Names` and `Emails`
 - Open up `generator.py` and add your own custom text for the certificate
-- Run `python generator.py` in cmd
+- Run `python generator.py`
 - Open up `sender.py` and add your email credentials
 - Verify the certificates folder and then replace the subject and body of email with your own data
-- Run `python sender.py` in cmd
+- Run `python sender.py`
 
 ## Author
 You can get in touch with me on my LinkedIn Profile:

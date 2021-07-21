@@ -14,7 +14,7 @@
 - Run `python generator.py`
 - Open up `sender.py` and add your email credentials
 - Verify the certificates folder and then replace the subject and body of email with your own data
-- Run `python sender.py`
+- Run command `python sender.py`
 
 ## Author
 You can get in touch with me on my LinkedIn Profile:

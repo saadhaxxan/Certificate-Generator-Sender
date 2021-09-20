@@ -3,9 +3,9 @@ import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 import os
 # reading csv
-data = pd.read_csv('demo.csv')
+data = pd.read_csv('senders.csv', sep=',', names=['Names', 'Emails'])
 # remove null values
-data.dropna(inplace=True,axis=1)
+data.dropna(inplace=True, axis=1)
 # dropping dupicate rows
 data.drop_duplicates(subset=['Emails'], keep='last', inplace=True)
 # convert to list
@@ -22,29 +22,30 @@ with open("logs.txt", 'a') as f:
         try:
             file_path = 'base_file.png'
             image = Image.open(file_path)
-            draw = ImageDraw.Draw(image)
-
-            (x, y) = (950, 1120)
-            color = 'rgb(45, 52, 54)'
+            rgb = Image.new('RGB', image.size, (255, 255, 255))  # white background
+            rgb.paste(image, mask=image.split()[3])
+            draw = ImageDraw.Draw(rgb)
+            (x, y) = (170, 820)
+            color = 'rgb(0, 151, 230)'
             name = name
-            font = ImageFont.truetype('arial.ttf', size=160)
+            font = ImageFont.truetype('arial.ttf', size=140)
             draw.text((x, y), name, fill=color, font=font)
 
-            (x, y) = (850, 1820)
+            (x, y) = (1000, 1280)
+            color = 'rgb(45, 52, 54)'
+            name = "Securing your Digital Frontier"
+            font = ImageFont.truetype('arial.ttf', size=60)
+            draw.text((x, y), name, fill=color, font=font, stroke_width=1,
+                    stroke_fill="black")
+
+            (x, y) = (170, 1800)
             color = 'rgb(45, 52, 54)'
             name = "Saad Aslam"
-            font = ImageFont.truetype('SouthamDemo.otf', size=180)
+            font = ImageFont.truetype('arial.ttf', size=50)
             draw.text((x, y), name, fill=color, font=font)
-
-            (x, y) = (1950, 1820)
-            color = 'rgb(45, 52, 54)'
-            name = "Fahad Ashiq"
-            font = ImageFont.truetype('SouthamDemo.otf', size=180)
-            draw.text((x, y), name, fill=color, font=font)
-
             cert_dir = 'certificates/'
             cert_path = cert_dir+email+'.pdf'
-            image.save(cert_path)
+            rgb.save(cert_path)
             print(str(email) + " Success")
             f.write(str(email) + " Success")
             f.write("\n")
